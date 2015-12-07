@@ -1,0 +1,44 @@
+.thread-info{
+	margin:10px 5px;
+	width:590px;
+	line-height:20px;
+}
+.thread-info a{
+	background-color: #0f75bd;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    padding: 4px 9px;
+    text-align: center;
+}
+.thread-info a:last-child{
+	background-color: inherit;
+	color: inherit;
+	padding: inherit;
+}
+.thread-info p{
+	font-weight:bold;
+	font-size:16px;
+	margin:3px 0;
+}
+.thread-ava{
+	width:105px;
+	height:111px;
+	text-align:center;
+	background-color:#EAF6F7;
+}
+.thread-ava img{
+	width:85px;
+	height:85px;
+	margin-top:4px;
+	border-radius: 3px;
+}
+.thread-content{
+	border-top: 1px solid #0f75bd;
+	margin-top:8px;
+	padding:5px;
+	text-align:justify;
+}
+.thread-content > p:first-child{
+	margin:10px 0;
+}
