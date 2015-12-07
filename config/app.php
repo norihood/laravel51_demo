@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost/laravel51_demo',
+    'url' => 'http://localhost/gclone/laravel51_demo',
 
     /*
     |--------------------------------------------------------------------------
