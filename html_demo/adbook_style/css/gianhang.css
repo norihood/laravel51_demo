@@ -1,0 +1,18 @@
+.news-left{
+	margin-left:14px !important;
+	width:700px !important;
+}
+.news-left table:first-child td:first-child {
+    width:215px;
+}
+.news-left table{
+	width:700px;
+	float:left;
+	margin:10px 0 5px 0;
+}
+.news-left table input[type='text']{
+	width:395px;
+}
+.news-left table tr td{
+	padding:13px 0;
+}

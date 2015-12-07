@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html"; charset="UTF-8">
+<link type="text/css" rel="StyleSheet" href="css/style.css">
+<link type="text/css" rel="StyleSheet" href="css/reset.css">
+<link type="text/css" rel="StyleSheet" href="css/thongtincanhan.css">
+<link type="text/css" rel="StyleSheet" href="css/font-awesome.css">
+</head>
+<body>
+	<div class="wallpapper">
+		<div class="inner-header">
+			<div class="header center text-while">
+				<i class="fa fa-home fa-2x left"></i>
+				<ul>
+					<li><a href="#">Trang chủ</a></li>
+					<li><a href="#">Tuyển dụng</a></li>
+					<li><a href="#">Hỗ trợ</a></li>
+					<li><a href="#">Like button</a></li>
+				</ul>
+				<i class="fa fa-user fa-2x right"></i>
+				<ul class="right">
+					<li><a href="#">Đăng nhập</a></li>
+					<li><a href="#">Đăng ký</a></li>
+				</ul>
+				
+				<div class="right header-from">
+					Nghệ An <i class="fa fa-caret-down" style="margin:0;"></i>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="content center">
+			<div class="ads-top left">
+			</div>
+			<div class="ads-top right">
+			</div>
+			<div class="search-bar left">
+				<div class="logo-page left">
+					<img src="css/img/logo.png"/>
+				</div>
+				<div class="search-box left">
+					<input type="text" name="search" />
+				</div>
+				<div class="search-button left">
+					<input type="button" name="search" />
+				</div>
+				<div class="post-button right">
+					<img src="css/img/btn-post.png"/>
+				</div>
+			</div>	
+		
+			<div class="clear"></div>
+			<div class="bar left">
+				<div class="bar-menu left-menu left text-while">
+					<p class="text-while">Tất cả danh mục </p>
+					<i class="fa fa-bars fa-2x"></i>
+				</div>
+				<div class="bar-news left">
+					<i class="fa fa-gears text-blue fa-2x"></i><a href="#">Adbook thông báo tuyển dụng quý 3 năm 2014</a>
+				</div>
+				<div class="bar-ads left">
+					<a href="#">Đặt tin <span style="color:red;">Vip ad</span> quảng cáo?</a>
+				</div>
+				<div class="bar-ghmp">
+				</div>
+			</div>
+			<div class="side-left left">
+				<div class="clear"></div>
+				<div class="content-left">
+					<div class="menu-left left-menu">
+						<div class="menu-cate">
+							<ul>
+								<li><a href="#">Việc làm</a></li>
+								<li><a href="#">Điện thoại, viễn thông</a></li>
+								<li><a href="#">Máy tính, linh kiện</a></li>
+								<li><a href="#">Điện tử, điện máy</a></li>
+								<li><a href="#">Bất động sản</a></li>
+								<li><a href="#">Ô tô, xe máy, xa đạp</a></li>
+								<li><a href="#">Mẹ & bé</a></li>
+								<li><a href="#">Sức khỏe, sắc đẹp</a></li>
+								<li><a href="#">Thời trang</a></li>
+								<li><a href="#">Ẩn thực, đồ uống</a></li>
+								<li><a href="#">Du lịch</a></li>
+								<li><a href="#">Công nghiệp, xây dựng</a></li>
+								<li><a href="#">Nội thất, ngoại thất</a></li>
+								<li><a href="#">Sách, văn phòng phẩm</a></li>
+								<li><a href="#">Dịch vụ, giải trí</a></li>
+								<li><a href="#">Kết bạn, nhóm hội</a></li>
+								<li><a href="#">Rao vặt</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="news-left left">
+						<!-- phan cua trang thong tin ca nhan -->
+						<div class="menu-infor-mem left">
+							<ul>
+								<li>Tài khoản của tôi</li>
+								<li><a href="#">Thông báo</a></li>
+								<li><a href="#">Ad của tôi</a></li>
+								<li><a href="#">Hộp thư đến</a></li>
+								<li><a href="#">Hộp thư đi</a></li>
+								<li><a href="#">Gian hàng Online</a></li>
+								<li><a href="#">Thông tin cá nhân</a></li>
+								<li><a href="#">Mật khẩu</a></li>
+							</ul>
+						</div>
+						<div class="infor-mem left">
+							<span class="text-red">Thông tin cá nhân</span>
+							<table>
+								<tr>
+									<td rowspan="2" ><img src="~/Upload/Avatar/@(thread.Owner).jpg" style="max-width: 80px;"/></td>
+									<td>
+										@Html.ActionLink(thread.Title,"Details", controllerName:"Thread",routeValues: new {friendlyDirectory=adbook.Code.GlobalVars.directories[thread.DirectoryLevel1].FriendlyTitle, friendlyTitle=thread.FriendlyTitle, id=thread.Id},htmlAttributes:new {}) <br />
+										@thread.ViewCount lượt xem, @thread.ReplyCount trả lời
+									</td>
+								</tr>
+								<tr>
+									<td><td>@Html.FormatDateTime(thread.Created_DateTime)</td></td>
+									<td colspan="2">&nbsp;</td>
+								</tr>
+							</table>
+						</div>
+						<!-- ket thuc -->
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="product-new product">
+					<div class="product-title">
+						<a href="">Sản phẩm mới</a>
+					</div>
+					<div class="list-product">
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img01.jpg"/></div>
+							<div class="child-product-name"><a href="#">Samsung galaxy S10</a></div>
+							<div class="child-product-price"><span>20.000.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img02.jpg"/></div>
+							<div class="child-product-name"><a href="#">Laptop Sony Vaio V102030</a></div>
+							<div class="child-product-price"><span>9.208.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img03.jpg"/></div>
+							<div class="child-product-name"><a href="#">Nokia Lumia 1325</a></div>
+							<div class="child-product-price"><span>6.520.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img04.png"/></div>
+							<div class="child-product-name"><a href="#">Tai nghe trắng</a></div>
+							<div class="child-product-price"><span>200.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img05.jpg"/></div>
+							<div class="child-product-name"><a href="#">HiPhone 9S</a></div>
+							<div class="child-product-price"><span>1.000.000 VNĐ</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="product-top-view product">
+					<div class="product-title">
+						<a href="">Sản phẩm xem nhiều nhất</a>
+					</div>
+					<div class="list-product">
+						<div class="list-product">
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img02.jpg"/></div>
+							<div class="child-product-name"><a href="#">Laptop Sony Vaio V102030</a></div>
+							<div class="child-product-price"><span>9.208.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img01.jpg"/></div>
+							<div class="child-product-name"><a href="#">Samsung galaxy S10</a></div>
+							<div class="child-product-price"><span>20.000.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img04.png"/></div>
+							<div class="child-product-name"><a href="#">Tai nghe trắng</a></div>
+							<div class="child-product-price"><span>200.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img05.jpg"/></div>
+							<div class="child-product-name"><a href="#">HiPhone 9S</a></div>
+							<div class="child-product-price"><span>1.000.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img03.jpg"/></div>
+							<div class="child-product-name"><a href="#">Nokia Lumia 1325</a></div>
+							<div class="child-product-price"><span>6.520.000 VNĐ</span></div>
+						</div>
+					</div>
+					</div>
+				</div> 
+				<div class="product-review product">
+					<div class="product-title">
+						<a href="">Sản phẩm đã xem</a>
+					</div>
+					<div class="list-product">
+						<div class="list-product">
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img02.jpg"/></div>
+							<div class="child-product-name"><a href="#">Laptop Sony Vaio V102030</a></div>
+							<div class="child-product-price"><span>9.208.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img03.jpg"/></div>
+							<div class="child-product-name"><a href="#">Nokia Lumia 1325</a></div>
+							<div class="child-product-price"><span>6.520.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img01.jpg"/></div>
+							<div class="child-product-name"><a href="#">Samsung galaxy S10</a></div>
+							<div class="child-product-price"><span>20.000.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img05.jpg"/></div>
+							<div class="child-product-name"><a href="#">HiPhone 9S</a></div>
+							<div class="child-product-price"><span>1.000.000 VNĐ</span></div>
+						</div>
+						<div class="child-product">
+							<div class="child-product-img"><img src="image/sp-img04.png"/></div>
+							<div class="child-product-name"><a href="#">Tai nghe trắng</a></div>
+							<div class="child-product-price"><span>200.000 VNĐ</span></div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="side-right left">
+				<div class="news-right left">
+					<div class="news-right-title">
+						<div id="news01" class="news-title news-title-select">
+							Tin mới
+						</div>
+						<div id="news02" class="news-title">
+							Kết bạn và nhóm hội
+						</div>
+						<div id="news03" class="news-title news-title-last">
+							Tin hot
+						</div>
+					</div>
+					<div class="news-right-content">
+						<ul>
+							<li><i class="fa fa-chevron-right"></i><a href="#">Công ty TNHH Kiểm toán Kreston ACA Việt Nam – Chi nhánh Miền Trung tuyển dụng.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Cần bán] Muốn mua smartphone chính hãng giá trên dưới 3 triệu.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Tìm việc] Nam . 1993 , vừa ra trường CNTT muốn phụ việc kĩ thuật viên học hỏi kinh ngiệm.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Cần bán] 6trieu cho một máy chất ip4s 16g màu trắng 99,99% hàng độc "ios6" 6.1.3.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Hôn nhân]Trước khi cưới bạn nên biết những gì về anh ấy?.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Tuyển dụng] Công ty Cần tuyển gấp 1 nữ Kế Toán.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Thời trang nữ] bỏ sỉ áo thun,áo đôi 65k.làm đồng phục lớp 90k.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Cần bán] bán note2 màu nòng súng mới 99%.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">Công ty TNHH Kiểm toán Kreston ACA Việt Nam – Chi nhánh Miền Trung tuyển dụng.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Cần bán] Muốn mua smartphone chính hãng giá trên dưới 3 triệu.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Tìm việc] Nam . 1993 , vừa ra trường CNTT muốn phụ việc kĩ thuật viên học hỏi kinh ngiệm.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Cần bán] 6trieu cho một máy chất ip4s 16g màu trắng 99,99% hàng độc "ios6" 6.1.3.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Hôn nhân]Trước khi cưới bạn nên biết những gì về anh ấy?.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Tuyển dụng] Công ty Cần tuyển gấp 1 nữ Kế Toán.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Thời trang nữ] bỏ sỉ áo thun,áo đôi 65k.làm đồng phục lớp 90k.</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="#">[Cần bán] bán note2 màu nòng súng mới 99%.</a></li>
+						</ul>
+						<div class="view-all right">
+							<a href="#">Xem tất cả</a>
+						</div>
+					</div>
+				</div>
+				<div class="ads-right left">
+					<div id="ads-right-01" class="child-ads-right">
+					</div>
+					<div id="ads-right-02" class="child-ads-right">
+					</div>
+					<div id="ads-right-03" class="child-ads-right">
+					</div>
+					<div id="ads-right-04" class="child-ads-right">
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="inner-footer">
+			<div class="footer center">
+				<div class="logo left">
+					<img src="css/img/bg-logo.jpg"/>
+				</div>
+				<div class="footer-info left">
+					© 2014 Sàn giao dịch thương mại điện tử Adbook.com.vn<br/>
+					Chủ quản: Công ty cổ phần truyền thông Clink<br/>
+					Email: contact@adbook.com.vn<br/>
+					Hotline: 01244.777.555 (<a href="#">Liên hệ quảng cáo</a>)<br/>
+				</div>
+				<div class="footer-info left">
+					Người đại diện: Cao Danh Cường<br/>
+					ĐKKD/MST: 2901721988 Sở KH& DT Nghệ An<br/>
+					VPGD: Số 06/94 Chu Văn An, TP Vinh, Nghệ An<br/>
+					<a href="#">Quy chế hoạt động và chính sách bảo mật</a><br/>
+				</div>
+				<div class="footer-info right">
+					<a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=6071">
+						<img width="140" height="67" src="http://online.gov.vn/seals/gZ6xh4B/Xks6HPAM8XW1pQ==.jpgx" title="" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</body>
+</html>

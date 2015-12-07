@@ -1,0 +1,123 @@
+.top-vip a{
+	color: #c30110;
+	font-weight:bold;
+}
+
+.top-vip ul li{
+	padding:3px;
+}
+
+.PageNav,.btn-newpost{
+	margin:10px 0;
+}
+.PageNav a{
+	border: 1px solid #b1b5b5;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 0 4px;
+	margin: 0 4px;
+}
+
+.btn-newpost{
+	background-color: #0f75bd;
+    border-radius: 3px;
+    color: white;
+    display: block;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    width: 95px;
+}
+.btn-newpost:hover{
+	color: #FFF;;
+}
+.post{
+	width:100%;
+	margin:8px 0;
+}
+.post-image{
+	width:103px;
+	height:81px;
+	border:1px solid #b1b5b5;
+	border-radius: 3px;
+	overflow:hidden;
+}
+.post-image img{
+	width:103px;
+	height:81px;
+}
+.post-info{
+	width:500px;
+	margin-left:10px;
+}
+.post-info a{
+	color:#0F75BC;
+	font-size:14px;
+}
+.post-time{
+	width:86px;
+	text-align:center;
+	padding-top:23px;
+}
+.post-time span{
+	
+}
+.list-product-left img{
+	*width:163px;
+	height:107px;
+	margin:auto;
+}
+.list-product-left > ul:first-child > li:first-child{
+	border:1px solid #b1b5b5;
+	border-bottom:none;
+	border-top:none;
+	padding:10px;
+	font-weight:bold;
+}
+.list-product-left > ul:first-child > li:last-child{
+	border:1px solid #b1b5b5;
+	border-top:none;
+}
+.list-product-left ul li ul{
+	border-top:1px solid #b1b5b5;
+}
+.list-product-left ul li ul li{
+	text-align: center;
+	overflow:hidden;
+}
+.list-product-left ul li ul li:last-child{
+	margin:10px 0;
+}
+.list-product-left ul li ul li:nth-child(2){
+	max-height:34px;
+}
+.news-right img{
+	width:70px;
+	height:80px;
+}
+.news-right > ul >li{
+	margin:17px 0;
+}
+.news-right > ul > li >ul{
+	overflow:hidden;
+}
+.news-right > ul > li >ul:first-child{
+	width:70px;
+	height:80px;
+	float:left;
+}
+.news-right > ul > li >ul:nth-child(2) a{
+	color:#0F75BC;
+	font-weight:bold;
+}
+.news-right > ul > li >ul:nth-child(2){
+	max-height:32px;
+}
+.news-right > ul > li >ul:nth-child(3){
+	font-size:10px;
+	max-height:28px;
+}
+.news-right > ul > li >ul:nth-child(4){
+	font-size:10px;
+	max-height:14px;
+}
