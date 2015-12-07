@@ -13,80 +13,60 @@
 	<!-- phan cua trang gian hang -->
 		<a href="#" class="left text-red">Đăng ký gian hàng Online để bán hàng hiệu quả hơn!</a>
 		<a href="#" class="right text-red">Tham khảo các gói gian hàng</a>
-		<form method="POST" action="{{url('dang-ky')}}" enctype="multipart/form-data">
-		<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-		<table>
-			<tr>
-				<td><p>Avatar (200px * 200px)</p></td>
-				<td><input type="file" name="avatar"></td>
-			</tr>
-			<tr>
-				<td><p>Tên đăng nhập:</p></td>
-				<td>
-					{!!Form::text('username')!!}
-				</td>
-				<td>
-					@if($errors->has('username')) {{$errors->first('username')}} @endif
-				</td>
-			</tr>
-			<tr>
-				<td><p>Mật khẩu:</p></td>
-				<td>
-					{!!Form::password('password')!!}
-				</td>
-				<td>
-					@if($errors->has('password')) {{$errors->first('password')}} @endif
-				</td>
-			</tr>
-			<tr>
-				<td><p>Nhập lại mật khẩu:</p></td>
-				<td>{!!Form::password('re-password')!!}</td>
-				<td>
-					@if($errors->has('re-password')) {{$errors->first('re-password')}} @endif
-				</td>
-			</tr>
-			<tr>
-				<td><p>Email:</p></td>
-				<td>{!!Form::email('email')!!}</td>
-				<td>
-					@if($errors->has('email')) {{$errors->first('email')}} @endif
-				</td>
-			</tr>
-			<tr>
-				<td><p>Điện thoại:</p></td>
-				<td>{!!Form::number('phone')!!}
-				<td>
-					@if($errors->has('phone')) {{$errors->first('phone')}} @endif
-				</td>
-			</tr>
-			<tr>
-				<td><p>Địa chỉ:</p></td>
-				<td>{!!Form::text('address')!!}
-				<td>
-					@if($errors->has('address')) {{$errors->first('address')}} @endif
-				</td>
-			</tr>
-			<tr>
-				<td><p>Giới tính:</p></td>
-				<td>
-					{!!Form::select('sex', array( '0' => 'Nam', '1' => 'Nu'), null, ['placeholder' => 'Pick sex']) !!}
-				</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><p>Ngày sinh:</p></td>
-				<td>{!!Form::date('birthday')!!}</td>
-				<td>
-					@if($errors->has('birthday')) {{$errors->first('birthday')}} @endif
-				</td>
-			<tr>
-				<td colspan="2"><input type="checkbox"/>Bạn đã đọc và đồng ý với <a href="#" class="text-red">Quy chế hoạt động và Chính sách bảo mật</a> của <span class="text-blue">Chợ37</span>.net </td>
-				<td><input type="submit" name="submit" value="Registry"></td>
-			</tr>
-			</tr>
-		</table>
-		</form>
+		<div class="clearfix"></div>
+		<br />
+		{!! Form::open(array('url' => url('dang-ky'), 'class' => 'form-horizontal')) !!}
+			{!! Form::token() !!}
+		    <div class="form-group">
+		    	{!!Form::label('email', 'E-Mail Address', array('class' => 'col-sm-3 control-label'))!!}
+				<div class="col-sm-9">
+					{!!Form::email('email', $value = null, $attributes = array('class' =>'form-control', 'id' => 'email', 'placeholder' => "Email" ))!!}
+				</div>
+			</div>
+			<div class="form-group">
+				{!!Form::label('name', 'Display name', array('class' => 'col-sm-3 control-label'))!!}
+				<div class="col-sm-9">
+				    {!!Form::text('name', $value = null, $attributes = array('class' =>'form-control', 'id' => 'name', 'placeholder' => "Display name" ))!!}
+				</div>
+			</div>
+			<div class="form-group">
+				{!!Form::label('password', 'Password', array('class' => 'col-sm-3 control-label'))!!}
+				<div class="col-sm-9">
+				    {!!Form::password('password', $attributes = array('class' => 'form-control', 'id' => 'password', 'placeholder' => "password" ))!!}
+				</div>
+			</div>
+			<div class="form-group">
+				{!!Form::label('re-password', 'Re-Password', array('class' => 'col-sm-3 control-label'))!!}
+				<div class="col-sm-9">
+				    {!!Form::password('re-password', $attributes = array('class' => 'form-control', 'id' => 're-password', 'placeholder' => "Confirm password" ))!!}
+				</div>
+			</div>
+			<div class="form-group">
+				{!!Form::label('phone', 'Phone', array('class' => 'col-sm-3 control-label'))!!}
+				<div class="col-sm-9">
+				    {!!Form::number('phone', $value = null, $attributes = array('class' =>'form-control', 'id' => 'number', 'placeholder' => "Phone number" ))!!}
+				</div>
+			</div>
+			<div class="form-group">
+				{!!Form::label('birthday', 'Birth', array('class' => 'col-sm-3 control-label'))!!}
+				<div class="col-sm-9">
+				    {!!Form::date('birthday', null, $attributes = array('class' =>'form-control', 'id' => 'birthday', 'placeholder' => "Birthday" ))!!}
+				</div>
+			</div>
+			<div class="form-group checkbox">
+				<div class="col-sm-offset-3 col-sm-9">
+				    <label>
+				      {!!Form::checkbox('agree', 'agree', null)!!}Check me out
+				    </label>
+			    </div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+					{!! Form::submit('Sign up', array('class' => 'btn btn-default')) !!}
+				</div>
+			</div>
+		{!! Form::close() !!}
+		
 		<!-- ket thuc -->
 	</div>
 	<div class="clear"></div>

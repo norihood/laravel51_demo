@@ -26,11 +26,7 @@ class HomeController extends BaseController
     	echo '<pre>';
     	//print_r(Input::all());
     	print_r($request->all());
-    	echo '<pre>';
-    	print_r($request->url());
-    	echo '<pre>';
-    	print_r($request->path());
-    	echo '<pre>';
+    	
 
     	return ;
     }
